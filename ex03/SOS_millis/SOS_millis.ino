@@ -22,7 +22,7 @@ void loop()
   {
     if(cur-pre>=abs(sos[step]))
     {
-      pre=cur;//更新基准
+      pre=pre+abs(sos[step]);//更新基准
       if(sos[step]>0)
       {
         digitalWrite(ledPin, HIGH);
