@@ -14,13 +14,13 @@ void loop() {
   for(int dutyCycle = 0; dutyCycle <= 255; dutyCycle++)
   {
     ledcWrite(ledPin_r, dutyCycle);
-    ledcWrite(ledPin_y, 255 - dutyCycle); 
+    ledcWrite(ledPin_y, dutyCycle); 
     delay(10);
   }
-  for(int dutyCycle = 0; dutyCycle <= 255; dutyCycle++)
+  for(int dutyCycle = 255; dutyCycle >=0; dutyCycle--)
   {
     ledcWrite(ledPin_y, dutyCycle);
-    ledcWrite(ledPin_r, 255 - dutyCycle); 
+    ledcWrite(ledPin_r, dutyCycle); 
     delay(10);
   }
 }
